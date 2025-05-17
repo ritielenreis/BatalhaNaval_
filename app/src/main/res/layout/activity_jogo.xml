@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/telainicial"
     android:orientation="vertical"
-    tools:context=".jogo">
+    tools:context=".Activity.JogoActivity">
 
     android:background="@drawable/telainicial">
 
@@ -19,7 +19,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/adlam_display"
         android:text="Realizar tiro"
         android:textAlignment="center"
         android:textSize="65dp"

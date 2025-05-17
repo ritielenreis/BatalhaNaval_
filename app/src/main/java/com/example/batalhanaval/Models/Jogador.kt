@@ -5,8 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.MutableLiveData
 
 class Jogador(
-    tabuleiroProprio: Tabuleiro = Tabuleiro()
-) : ViewModel() {
+        tabuleiroProprio: Tabuleiro = Tabuleiro()
+        ) : ViewModel() {
 
     val tabuleiroProprio = MutableLiveData(tabuleiroProprio)
 
@@ -17,7 +17,7 @@ class Jogador(
     val tabuleiroDefinido: LiveData<Boolean> get() = _tabuleiroDefinido
 
 
-    fun posicionarNavioJogador(id: Int,jogadorAtual:Jogador, jogadorAdversario:Jogador) {
+    public fun posicionarNavioJogador(id: Int, jogadorAtual: Jogador, jogadorAdversario: Jogador) {
         val navios = jogadorAdversario._naviosRestantes.value ?: return
 
         if (navios > 0 && jogadorAtual.tabuleiroProprio.value?.posicionarNavio(id) == true) {
@@ -27,6 +27,6 @@ class Jogador(
         if (naviosRestantes.value == 0) {
             jogadorAdversario._tabuleiroDefinido.value = true
         }
-}
+    }
 
 }

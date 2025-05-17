@@ -8,7 +8,7 @@
     android:background="@drawable/telainicial"
 
     android:orientation="vertical"
-    tools:context=".ganhador" >
+    tools:context=".Activity.GanhadorActivity" >
 
     <Space
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/adlam_display"
         android:text="Vencedor é"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -26,11 +26,10 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/vencedor"
+        android:id="@+id/textViewJogadorVencedor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="Jogador 1"
+        android:fontFamily="@font/adlam_display"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="70dp"

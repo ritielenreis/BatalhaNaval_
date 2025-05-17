@@ -1,4 +1,5 @@
 package com.example.batalhanaval.Models
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
@@ -9,9 +10,15 @@ class Tabuleiro {
     val coordenadas: LiveData<List<Coordenada>> get() = _coordenadas
 
     init {
-        resetarTabuleiro()
+        val novaLista = (0 until 25).map { id ->
+            Coordenada(id = id, temNavio = false, foiAtacada = false)
+        }
+        _coordenadas.value = novaLista
+
+        //resetarTabuleiro()
     }
 
+    /*
     // Redefine todas as coordenadas do tabuleiro
     fun resetarTabuleiro() {
         val novaLista = (0 until 25).map { id ->
@@ -19,13 +26,14 @@ class Tabuleiro {
         }
         _coordenadas.value = novaLista
     }
+    */
 
     // Posiciona um navio se ainda não houver um
     fun posicionarNavio(id: Int): Boolean {
         val listaAtual = _coordenadas.value?.toMutableList() ?: return false
         val coordenada = listaAtual[id]
 
-        if (!coordenada.temNavio) {
+        if (coordenada.temNavio == false) {
             listaAtual[id] = coordenada.copy(temNavio = true)
             _coordenadas.value = listaAtual
             return true
@@ -38,7 +46,7 @@ class Tabuleiro {
         val listaAtual = _coordenadas.value?.toMutableList() ?: return false
         val coordenada = listaAtual[id]
 
-        if (!coordenada.foiAtacada) {
+        if (coordenada.foiAtacada == false) {
             listaAtual[id] = coordenada.copy(foiAtacada = true)
             _coordenadas.value = listaAtual
             return true

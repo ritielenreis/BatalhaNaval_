@@ -1,27 +1,41 @@
-package com.example.batalhanaval
+package com.example.batalhanaval.Activity
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.batalhanaval.R
 
-class defineNavio : AppCompatActivity() {
+class GanhadorActivity : AppCompatActivity() {
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_define_navio)
+        setContentView(R.layout.activity_ganhador)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //definir o TextVencedor para o nome do jogador
+        var vencedor = intent.getStringExtra("jogador")
+
+        if (vencedor != null) {
+            val textView = findViewById<TextView>(R.id.textViewJogadorVencedor)
+            textView.text = vencedor
+        }
+
     }
 
-    fun proxJogador(view: View) {
-        val intent = Intent(this, defineNavio::class.java)
+    fun jogarNovamente(view: View) {
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 }

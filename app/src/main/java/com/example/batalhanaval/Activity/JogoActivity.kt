@@ -26,15 +26,9 @@ class JogoActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         iniciarTabuleiros()
-
-
-    }
-
-
-    fun mudarTabuleiro(){
-
-
+        definirTextoInicial()
     }
 
     fun atirar(view: View) {
@@ -79,47 +73,31 @@ class JogoActivity : AppCompatActivity() {
     }
 
 
-
     //**************  BOTAO PARA PASSAR TURNO  **************
     fun proximoTurno(view: View) {
-
-
-
-        //val intent = Intent(this, JogoActivity::class.java)
-
-        //val tiroRealizado = verificarCondicao() //recebe o resultado da funcao e define a view de acordo
-
-
-        /*
-        val intent = if (tiroRealizado) {
-            Intent(this, jogo::class.java)
-        } else {
-            Intent(this, defineNavio::class.java)
-        }
-        startActivity(intent)
-        */
+        JogoController.mudarTurno()
         val intent = Intent(this, TransicaoActivity::class.java)
-
-        if (JogoController.jogadorAtual() == 1){
-            intent.putExtra("jogador","Jogador 1")
-            val intent = Intent(this, TransicaoActivity::class.java)
-        } else{
-            intent.putExtra("jogador","Jogador 2")
-        }
-
-
         startActivity(intent)
     }
 
 
-    fun iniciarTabuleiros(){
+    //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
+    private fun definirTextoInicial() {
+        val textoTabuleiro = findViewById<TextView>(R.id.textJogadorTiro)
+        val jogadorAtual = JogoController.jogadorAtual()
+        if (jogadorAtual == 1) {
+            textoTabuleiro.setText("Jogador 1")
+        } else {
+            textoTabuleiro.setText("Jogador 2")
+        }
+    }
 
+    private fun iniciarTabuleiros(){
         val switchTabuleiro = findViewById<Switch>(R.id.switch1)
 
         val tabuleiroJogador = findViewById<GridLayout>(R.id.tabuleiroProprio)
         val tabuleiroOponente = findViewById<GridLayout>(R.id.tabuleiroInimigo)
         val textTabuleiro = findViewById<TextView>(R.id.textTabuleiro)
-
 
         tabuleiroJogador.visibility = View.VISIBLE
         tabuleiroOponente.visibility = View.GONE
@@ -139,8 +117,9 @@ class JogoActivity : AppCompatActivity() {
             }
         }
 
-        //**************************** DEFINE AS IMAGENS INICIAS E O ESTADO DO BOTAO (SE ATIROU PASSA A INATIVO) *********************************
 
+        //**************************** DEFINE AS IMAGENS INICIAS E O ESTADO DO BOTAO (SE ATIROU PASSA A INATIVO) *********************************
+        
         if(JogoController.jogadorAtual()==1){
             for (view in tabuleiroJogador.children) {
                 if (view is ImageButton) {
@@ -167,16 +146,31 @@ class JogoActivity : AppCompatActivity() {
 
     }
 
-
-
-
-
-
-
-
-
-
 }
 
 
+/*
+* // ADICIONAR as imagens nos botões BOTÕES DAS COORDENADAS
+        val grid = findViewById<GridLayout>(R.id.grid)
+
+        for (i in 0 until grid.childCount) {
+
+            val botao = grid.getChildAt(i) as ImageButton
+
+
+            botao.setOnClickListener { view ->
+                val tag = view.tag.toString()  // ex: "2,3"
+
+                val coordenada = tag.toInt()
+                // Exemplo: mudar imagem
+
+                botao.setImageResource(R.drawable.navioDestruido)
+
+
+                // Agora você sabe qual botão foi clicado
+                Toast.makeText(this, "Clicou em $linha, $coluna", Toast.LENGTH_SHORT).show()
+
+            }
+        }
+* */
 

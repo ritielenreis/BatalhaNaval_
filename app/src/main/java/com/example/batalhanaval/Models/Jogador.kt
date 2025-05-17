@@ -14,4 +14,8 @@ class Jogador(
 
        //this.tabuleiroProprio.posicionarNavio(id)
     }
+
+    val tabuleiro = List(25) { index ->
+        Coordenada(id = index + 1) // id de 1 a 25
+    }
 }

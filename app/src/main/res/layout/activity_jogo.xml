@@ -23,7 +23,7 @@
                 android:layout_height="40dp" />
 
             <TextView
-                android:id="@+id/textJogo"
+                android:id="@+id/textJogadorTiro"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:fontFamily="@font/adlam_display"
@@ -50,7 +50,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textView100"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:fontFamily="@font/adlam_display"
@@ -444,7 +444,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="26" />
+                        android:tag="1" />
 
                     <ImageButton
                         android:id="@+id/b27"
@@ -454,7 +454,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="27" />
+                        android:tag="2" />
 
                     <ImageButton
                         android:id="@+id/b28"
@@ -464,7 +464,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="28" />
+                        android:tag="3" />
 
                     <ImageButton
                         android:id="@+id/b29"
@@ -474,7 +474,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="29" />
+                        android:tag="4" />
 
                     <ImageButton
                         android:id="@+id/b30"
@@ -484,7 +484,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="30" />
+                        android:tag="5" />
 
                     <!-- Linha 1 -->
                     <ImageButton
@@ -495,7 +495,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="31" />
+                        android:tag="6" />
 
                     <ImageButton
                         android:id="@+id/b32"
@@ -505,7 +505,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="32" />
+                        android:tag="7" />
 
                     <ImageButton
                         android:id="@+id/b33"
@@ -515,7 +515,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="33" />
+                        android:tag="8" />
 
                     <ImageButton
                         android:id="@+id/b34"
@@ -525,7 +525,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="34" />
+                        android:tag="9" />
 
                     <ImageButton
                         android:id="@+id/b35"
@@ -535,7 +535,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="35" />
+                        android:tag="10" />
 
                     <!-- Linha 2 -->
                     <ImageButton
@@ -546,7 +546,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="36" />
+                        android:tag="11" />
 
                     <ImageButton
                         android:id="@+id/b37"
@@ -556,7 +556,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="37" />
+                        android:tag="12" />
 
                     <ImageButton
                         android:id="@+id/b38"
@@ -565,7 +565,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="38" />
+                        android:tag="13" />
 
                     <ImageButton
                         android:id="@+id/b39"
@@ -575,7 +575,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="39" />
+                        android:tag="14" />
 
                     <ImageButton
                         android:id="@+id/b40"
@@ -585,7 +585,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="40" />
+                        android:tag="15" />
 
                     <!-- Linha 3 -->
                     <ImageButton
@@ -596,7 +596,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="41" />
+                        android:tag="16" />
 
                     <ImageButton
                         android:id="@+id/b42"
@@ -606,7 +606,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="42" />
+                        android:tag="17" />
 
                     <ImageButton
                         android:id="@+id/b43"
@@ -616,7 +616,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="43" />
+                        android:tag="18" />
 
                     <ImageButton
                         android:id="@+id/b44"
@@ -626,7 +626,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="44" />
+                        android:tag="19" />
 
                     <ImageButton
                         android:id="@+id/b45"
@@ -636,7 +636,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="45" />
+                        android:tag="20" />
 
                     <!-- Linha 4 -->
                     <ImageButton
@@ -647,7 +647,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="46" />
+                        android:tag="21" />
 
                     <ImageButton
                         android:id="@+id/b47"
@@ -657,7 +657,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="47" />
+                        android:tag="22" />
 
                     <ImageButton
                         android:id="@+id/b48"
@@ -667,7 +667,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="48" />
+                        android:tag="23" />
 
                     <ImageButton
                         android:id="@+id/b49"
@@ -677,7 +677,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="49" />
+                        android:tag="24" />
 
                     <ImageButton
                         android:id="@+id/b50"
@@ -687,7 +687,7 @@
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="50" />
+                        android:tag="25" />
 
                 </GridLayout>
 

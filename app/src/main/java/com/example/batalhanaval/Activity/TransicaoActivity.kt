@@ -21,28 +21,35 @@ class TransicaoActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        var jogador = intent.getStringExtra("jogador")
-
-        if (jogador != null) {
-            val textView = findViewById<TextView>(R.id.textTransicao)
-            textView.text = jogador
-        }
-
+        definirTextoInicial()
     }
 
 
+    //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
+    private fun definirTextoInicial() {
+        val textoTabuleiro = findViewById<TextView>(R.id.textTransicao)
+        val jogadorAtual = JogoController.jogadorAtual()
 
-
-    fun proxJogador(view: View) {
-        val intent = Intent(this, GanhadorActivity::class.java)
-
-        if (JogoController.jogadorAtual() == 1){
-            intent.putExtra("jogador","Jogador 2")
-        } else{
-            intent.putExtra("jogador","Jogador 1")
+        if (jogadorAtual == 1) {
+            textoTabuleiro.setText("Jogador 1")
+        } else {
+            textoTabuleiro.setText("Jogador 2")
         }
+    }
 
-        startActivity(intent)
+
+    //************** USADO NO BOTAO PARA PASSAR TURNO  **************
+    fun passarTurno(view: View) {
+        val jogadorAtual = JogoController.jogadorAtual()
+
+        //SE O JOGADOR 2 NAO DEFINIU NAVIO IRÁ PARA DEFINE ACTIVITY
+        if (jogadorAtual == 2 && !JogoController.tabuleiroDefinido(2)){
+            val intent = Intent(this, DefineNavioActivity::class.java)
+            startActivity(intent)
+        } else{
+            val intent = Intent(this, JogoActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

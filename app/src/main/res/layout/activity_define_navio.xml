@@ -23,7 +23,7 @@
                 android:layout_height="40dp" />
 
             <TextView
-                android:id="@+id/textJogo"
+                android:id="@+id/textJogadorDN"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/adlam_display"
@@ -50,7 +50,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textView100"
 
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -66,7 +66,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textTabuleiro"
+                android:id="@+id/textNaviosRestantes"
 
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -74,7 +74,7 @@
                 android:paddingTop="10dp"
                 android:shadowColor="@color/black"
                 android:shadowRadius="40"
-                android:text="Restantes: 2"
+                android:text="Restantes: 3"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="25dp"
@@ -109,7 +109,7 @@
                     android:visibility="invisible" />
 
                 <GridLayout
-                    android:id="@+id/tabuleiroProprio"
+                    android:id="@+id/tabuleiroDefineNavio"
                     android:layout_width="288dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -128,7 +128,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="100" />
+                        android:tag="1" />
 
                     <ImageButton
                         android:id="@+id/b101"
@@ -139,7 +139,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="101" />
+                        android:tag="2" />
 
                     <ImageButton
                         android:id="@+id/b102"
@@ -150,7 +150,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="102" />
+                        android:tag="3" />
 
                     <ImageButton
                         android:id="@+id/b103"
@@ -161,7 +161,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="103" />
+                        android:tag="4" />
 
                     <ImageButton
                         android:id="@+id/b104"
@@ -172,7 +172,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="104" />
+                        android:tag="5" />
 
                     <!-- Linha 1 -->
                     <ImageButton
@@ -184,7 +184,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="105" />
+                        android:tag="6" />
 
                     <ImageButton
                         android:id="@+id/b106"
@@ -195,7 +195,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="106" />
+                        android:tag="7" />
 
                     <ImageButton
                         android:id="@+id/b107"
@@ -206,7 +206,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="107" />
+                        android:tag="8" />
 
                     <ImageButton
                         android:id="@+id/b108"
@@ -217,7 +217,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="108" />
+                        android:tag="9" />
 
                     <ImageButton
                         android:id="@+id/b109"
@@ -228,7 +228,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="109" />
+                        android:tag="10" />
 
                     <!-- Linha 2 -->
                     <ImageButton
@@ -240,7 +240,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="110" />
+                        android:tag="11" />
 
                     <ImageButton
                         android:id="@+id/b111"
@@ -251,7 +251,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="111" />
+                        android:tag="12" />
 
                     <ImageButton
                         android:id="@+id/b112"
@@ -261,7 +261,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="112" />
+                        android:tag="13" />
 
                     <ImageButton
                         android:id="@+id/b113"
@@ -272,7 +272,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="113" />
+                        android:tag="14" />
 
                     <ImageButton
                         android:id="@+id/b114"
@@ -283,7 +283,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="114" />
+                        android:tag="15" />
 
                     <!-- Linha 3 -->
                     <ImageButton
@@ -295,7 +295,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="115" />
+                        android:tag="16" />
 
                     <ImageButton
                         android:id="@+id/b116"
@@ -306,7 +306,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="116" />
+                        android:tag="17" />
 
                     <ImageButton
                         android:id="@+id/b117"
@@ -317,7 +317,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="117" />
+                        android:tag="18" />
 
                     <ImageButton
                         android:id="@+id/b118"
@@ -328,7 +328,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="118" />
+                        android:tag="19" />
 
                     <ImageButton
                         android:id="@+id/b119"
@@ -339,7 +339,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="119" />
+                        android:tag="20" />
 
                     <!-- Linha 4 -->
                     <ImageButton
@@ -351,7 +351,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="120" />
+                        android:tag="21" />
 
                     <ImageButton
                         android:id="@+id/b121"
@@ -362,7 +362,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="121" />
+                        android:tag="22" />
 
                     <ImageButton
                         android:id="@+id/b122"
@@ -373,7 +373,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="122" />
+                        android:tag="23" />
 
                     <ImageButton
                         android:id="@+id/b123"
@@ -384,7 +384,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="123" />
+                        android:tag="24" />
 
                     <ImageButton
                         android:id="@+id/b124"
@@ -395,7 +395,7 @@
                         android:onClick="definirNavio"
                         android:padding="3dp"
                         android:src="@drawable/borda"
-                        android:tag="124" />
+                        android:tag="25" />
                 </GridLayout>
 
                 <View
@@ -431,7 +431,7 @@
                 android:enabled="false"
                 android:insetLeft="50dp"
                 android:insetRight="50dp"
-                android:onClick="proxJogador"
+                android:onClick="passarTurno"
                 android:shadowColor="@color/black"
                 android:shadowRadius="80"
                 android:text="Proximo Jogador"

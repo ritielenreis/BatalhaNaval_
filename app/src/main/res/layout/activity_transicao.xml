@@ -6,52 +6,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/telainicial"
-
     android:orientation="vertical"
     tools:context=".Activity.TransicaoActivity">
 
-    <Space
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="112dp" />
+        android:layout_height="550dp">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
-        android:text="Turno do"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="70dp"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewJogadorTransicao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="70dp"
-        android:textStyle="bold" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="177dp" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adlam_display"
+                android:shadowColor="@color/black"
+                android:shadowRadius="40"
+                android:text="Turno do"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="75dp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnfinal"
+            <TextView
+                android:id="@+id/textTransicao"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:fontFamily="@font/adlam_display"
+                android:shadowColor="@color/black"
+                android:shadowRadius="80"
+                android:text="Jogador 1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="80dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#25E42F"
-        android:insetLeft="50dp"
-        android:insetRight="50dp"
-        android:onClick="proxJogador"
-        android:text="Jogar"
-        android:textAlignment="center"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        app:cornerRadius="10dp" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnfinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#25E42F"
+                android:insetLeft="50dp"
+                android:insetRight="50dp"
+                android:onClick="proxJogador"
+                android:shadowColor="@color/black"
+                android:shadowRadius="80"
+                android:text="Jogar"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+    </FrameLayout>
 
 
 </LinearLayout>

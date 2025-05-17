@@ -23,9 +23,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun iniciarJogo(view: View) {
-
         JogoController.novoJogo()
-
         val intent = Intent(this, DefineNavioActivity::class.java)
         startActivity(intent)
     }

@@ -28,8 +28,10 @@ class Tabuleiro {
     }
     */
 
+
     // Posiciona um navio se ainda não houver um
-    fun posicionarNavio(id: Int): Boolean {
+
+    public fun posicionarNavio(id: Int): Boolean {
         val listaAtual = _coordenadas.value?.toMutableList() ?: return false
         val coordenada = listaAtual[id]
 

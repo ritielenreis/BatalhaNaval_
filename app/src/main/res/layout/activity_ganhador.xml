@@ -3,54 +3,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@drawable/telainicial"
-
     android:orientation="vertical"
-    tools:context=".Activity.GanhadorActivity" >
+    tools:context=".Activity.GanhadorActivity">
 
-    <Space
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="112dp" />
+        android:layout_height="550dp">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
-        android:text="Vencedor é"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="70dp"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewJogadorVencedor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="70dp"
-        android:textStyle="bold" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="177dp" />
+            <TextView
+                android:id="@+id/textView4"
 
-    <Button
-        android:id="@+id/btnfinal"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:fontFamily="@font/adlam_display"
+                android:shadowColor="@color/black"
+                android:shadowRadius="40"
+                android:text="Vencedor"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="75dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textJogadorVencedor"
+
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:fontFamily="@font/adlam_display"
+                android:shadowColor="@color/black"
+                android:shadowRadius="40"
+                android:text="Jogador 1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="75dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#25E42F"
-        android:insetLeft="50dp"
-        android:insetRight="50dp"
-        android:onClick="jogarNovamente"
-        android:text="Jogar Novamente"
-        android:textAlignment="center"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        app:cornerRadius="10dp" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnfinal"
+                android:layout_width="match_parent"
+
+                android:layout_height="80dp"
+                android:backgroundTint="#25E42F"
+                android:fontFamily="@font/adlam_display"
+                android:insetLeft="50dp"
+                android:insetRight="50dp"
+                android:onClick="jogarNovamente"
+                android:shadowColor="@color/black"
+                android:shadowRadius="80"
+                android:text="Novo Jogo"
+                android:textAlignment="center"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>

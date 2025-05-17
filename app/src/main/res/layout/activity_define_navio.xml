@@ -5,42 +5,442 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/telainicial"
     android:orientation="vertical"
-    tools:context=".Activity.DefineNavioActivity"
+    tools:context=".Activity.DefineNavioActivity">
 
-    android:background="@drawable/telainicial">
-
-    <Space
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="89dp" />
+        android:layout_height="130dp">
 
-    <TextView
-        android:id="@+id/textView"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/textJogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/adlam_display"
+                android:shadowColor="@color/black"
+                android:shadowRadius="40"
+                android:text="Jogador 1"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="60dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
-        android:text="Definir Navio"
-        android:textAlignment="center"
-        android:textSize="65dp"
-        android:textStyle="bold" />
+        android:layout_height="100dp">
 
-    <Space
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/adlam_display"
+                android:freezesText="false"
+                android:paddingTop="10dp"
+                android:shadowColor="@color/black"
+                android:shadowRadius="40"
+                android:text="Posicione seus navios"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textTabuleiro"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/adlam_display"
+                android:paddingTop="10dp"
+                android:shadowColor="@color/black"
+                android:shadowRadius="40"
+                android:text="Restantes: 2"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="350dp">
 
-    <Button
-        android:id="@+id/btn1"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <GridLayout
+                    android:id="@+id/tabuleiroProprio"
+                    android:layout_width="288dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:columnCount="5"
+                    android:rowCount="5">
+
+
+                    <!-- Linha 0 -->
+
+                    <ImageButton
+                        android:id="@+id/b100"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="100" />
+
+                    <ImageButton
+                        android:id="@+id/b101"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="101" />
+
+                    <ImageButton
+                        android:id="@+id/b102"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="102" />
+
+                    <ImageButton
+                        android:id="@+id/b103"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="103" />
+
+                    <ImageButton
+                        android:id="@+id/b104"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="104" />
+
+                    <!-- Linha 1 -->
+                    <ImageButton
+                        android:id="@+id/b105"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="105" />
+
+                    <ImageButton
+                        android:id="@+id/b106"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="106" />
+
+                    <ImageButton
+                        android:id="@+id/b107"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="107" />
+
+                    <ImageButton
+                        android:id="@+id/b108"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="108" />
+
+                    <ImageButton
+                        android:id="@+id/b109"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="109" />
+
+                    <!-- Linha 2 -->
+                    <ImageButton
+                        android:id="@+id/b110"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="110" />
+
+                    <ImageButton
+                        android:id="@+id/b111"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="111" />
+
+                    <ImageButton
+                        android:id="@+id/b112"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="112" />
+
+                    <ImageButton
+                        android:id="@+id/b113"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="113" />
+
+                    <ImageButton
+                        android:id="@+id/b114"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="114" />
+
+                    <!-- Linha 3 -->
+                    <ImageButton
+                        android:id="@+id/b115"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="115" />
+
+                    <ImageButton
+                        android:id="@+id/b116"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="116" />
+
+                    <ImageButton
+                        android:id="@+id/b117"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="117" />
+
+                    <ImageButton
+                        android:id="@+id/b118"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="118" />
+
+                    <ImageButton
+                        android:id="@+id/b119"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="119" />
+
+                    <!-- Linha 4 -->
+                    <ImageButton
+                        android:id="@+id/b120"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="120" />
+
+                    <ImageButton
+                        android:id="@+id/b121"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="121" />
+
+                    <ImageButton
+                        android:id="@+id/b122"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="122" />
+
+                    <ImageButton
+                        android:id="@+id/b123"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="123" />
+
+                    <ImageButton
+                        android:id="@+id/b124"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+
+                        android:background="@android:color/transparent"
+                        android:onClick="definirNavio"
+                        android:padding="3dp"
+                        android:src="@drawable/borda"
+                        android:tag="124" />
+                </GridLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#25E42F"
-        android:insetLeft="50dp"
-        android:insetRight="50dp"
-        android:onClick="proxJogador"
-        android:text="Passar vez"
-        android:textAlignment="center"
-        android:textSize="45dp"
-        android:textStyle="bold"
-        app:cornerRadius="10dp" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="#25E42F"
+                android:enabled="false"
+                android:insetLeft="50dp"
+                android:insetRight="50dp"
+                android:onClick="proxJogador"
+                android:shadowColor="@color/black"
+                android:shadowRadius="80"
+                android:text="Proximo Jogador"
+                android:textAlignment="center"
+                android:textSize="33dp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>

@@ -24,7 +24,7 @@ class TransicaoActivity : AppCompatActivity() {
         var jogador = intent.getStringExtra("jogador")
 
         if (jogador != null) {
-            val textView = findViewById<TextView>(R.id.textViewJogadorTransicao)
+            val textView = findViewById<TextView>(R.id.textTransicao)
             textView.text = jogador
         }
 
@@ -36,11 +36,9 @@ class TransicaoActivity : AppCompatActivity() {
     fun proxJogador(view: View) {
         val intent = Intent(this, GanhadorActivity::class.java)
 
-        if (JogoController.jogadorAtual == 1){
-            JogoController.jogadorAtual = 2
+        if (JogoController.jogadorAtual() == 1){
             intent.putExtra("jogador","Jogador 2")
         } else{
-            JogoController.jogadorAtual = 1
             intent.putExtra("jogador","Jogador 1")
         }
 

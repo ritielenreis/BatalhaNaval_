@@ -28,7 +28,7 @@ class GanhadorActivity : AppCompatActivity() {
         var vencedor = intent.getStringExtra("jogador")
 
         if (vencedor != null) {
-            val textView = findViewById<TextView>(R.id.textViewJogadorVencedor)
+            val textView = findViewById<TextView>(R.id.textJogadorVencedor)
             textView.text = vencedor
         }
 

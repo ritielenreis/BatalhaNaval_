@@ -10,37 +10,64 @@
 
     tools:context=".Activity.MainActivity">
 
-    <Space
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="184dp" />
+        android:layout_height="550dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
-        android:text="Batalha Naval"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="80dp"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="116dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
 
-    <Button
-        android:id="@+id/btn1"
+            <TextView
+                android:id="@+id/textJogo"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:fontFamily="@font/adlam_display"
+                android:shadowColor="@color/black"
+                android:shadowRadius="40"
+                android:text="Batalha Naval"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="80dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#25E42F"
-        android:insetLeft="50dp"
-        android:insetRight="50dp"
-        android:onClick="iniciarJogo"
-        android:text="Iniciar Jogo"
-        android:textAlignment="center"
-        android:textSize="45dp"
-        android:textStyle="bold"
-        app:cornerRadius="10dp" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="351dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnProx"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:backgroundTint="#25E42F"
+                android:insetLeft="50dp"
+                android:insetRight="50dp"
+                android:onClick="iniciarJogo"
+                android:shadowColor="@color/black"
+                android:shadowRadius="80"
+                android:text="Iniciar Jogo"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>

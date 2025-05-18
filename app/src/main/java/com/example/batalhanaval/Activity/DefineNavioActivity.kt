@@ -29,8 +29,6 @@ class DefineNavioActivity : AppCompatActivity() {
         definirTextoInicial()   //texto inicial jogador atual
     }
 
-
-
     //**************  BOTAO PARA DEFINIR NAVIO  **************
     fun definirNavio(view: View) {
         val cooderdana = view as ImageButton                    //RECEBE O OBJETO BOTAO QUE DEU O CLIQUE (1 a 25)
@@ -64,6 +62,20 @@ class DefineNavioActivity : AppCompatActivity() {
     }
 
 
+    //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
+    private fun definirTextoInicial() {
+        val textoTabuleiro = findViewById<TextView>(R.id.textJogadorDN)
+        val jogadorAtual = JogoController.jogadorAtual()
+        textoTabuleiro.setText("Jogador $jogadorAtual")
+    }
+
+    //************** USADO NO BOTAO PARA PASSAR TURNO  **************
+    fun passarTurno(view: View) {
+        JogoController.mudarTurno()
+        val intent = Intent(this, TransicaoActivity::class.java)
+        startActivity(intent)
+    }
+
     fun teste(view: View){
         val cooderdana = view as ImageButton                    //RECEBE O OBJETO BOTAO QUE DEU O CLIQUE (1 a 25)
         val id = cooderdana.tag.toString().toInt()              //RECEBE O NUMERO DA COORDENADA QUE DEU O CLIQUEI (1 A 25)
@@ -71,25 +83,5 @@ class DefineNavioActivity : AppCompatActivity() {
         val jogadorAtual = JogoController.jogadorAtual()
         val botaoPassarTurno = findViewById<Button>(R.id.btn0)
         val textoTabuleiro = findViewById<TextView>(R.id.textTabuleiro)
-    }
-
-
-    //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
-    private fun definirTextoInicial() {
-        val textoTabuleiro = findViewById<TextView>(R.id.textJogadorDN)
-        val jogadorAtual = JogoController.jogadorAtual()
-        if (jogadorAtual == 1) {
-            textoTabuleiro.setText("Jogador 1")
-        } else {
-            textoTabuleiro.setText("Jogador 2")
-        }
-    }
-
-
-    //************** USADO NO BOTAO PARA PASSAR TURNO  **************
-    fun passarTurno(view: View) {
-        JogoController.mudarTurno()
-        val intent = Intent(this, TransicaoActivity::class.java)
-        startActivity(intent)
     }
 }

@@ -150,6 +150,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -160,6 +165,11 @@
                         android:id="@+id/b2"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -172,6 +182,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -183,6 +198,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -193,6 +213,11 @@
                         android:id="@+id/b5"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -206,6 +231,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -216,6 +246,11 @@
                         android:id="@+id/b7"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -228,6 +263,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -239,6 +279,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -249,6 +294,11 @@
                         android:id="@+id/b10"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -262,6 +312,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -273,6 +328,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -283,6 +343,12 @@
                         android:id="@+id/b13"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -294,6 +360,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -304,6 +375,11 @@
                         android:id="@+id/b15"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -317,6 +393,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -327,6 +408,11 @@
                         android:id="@+id/b17"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -339,6 +425,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -350,6 +441,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -360,6 +456,11 @@
                         android:id="@+id/b20"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -373,6 +474,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -383,6 +489,11 @@
                         android:id="@+id/b22"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -395,6 +506,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -406,6 +522,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
@@ -416,6 +537,11 @@
                         android:id="@+id/b25"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:onClick="atirar"
@@ -441,6 +567,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -450,6 +581,11 @@
                         android:id="@+id/b27"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"
@@ -461,6 +597,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -471,6 +612,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -480,6 +626,11 @@
                         android:id="@+id/b30"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"
@@ -492,6 +643,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -501,6 +657,11 @@
                         android:id="@+id/b32"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"
@@ -512,6 +673,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -522,6 +688,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -531,6 +702,11 @@
                         android:id="@+id/b35"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"
@@ -543,6 +719,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -553,6 +734,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -562,6 +748,12 @@
                         android:id="@+id/b38"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -572,6 +764,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -581,6 +778,11 @@
                         android:id="@+id/b40"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"
@@ -593,6 +795,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -602,6 +809,11 @@
                         android:id="@+id/b42"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"
@@ -613,6 +825,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -623,6 +840,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -632,6 +854,11 @@
                         android:id="@+id/b45"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"
@@ -644,6 +871,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -653,6 +885,11 @@
                         android:id="@+id/b47"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"
@@ -664,6 +901,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -674,6 +916,11 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
+
                         android:background="@android:color/transparent"
                         android:padding="3dp"
                         android:src="@drawable/borda"
@@ -683,6 +930,11 @@
                         android:id="@+id/b50"
                         android:layout_width="58dp"
                         android:layout_height="58dp"
+
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:focusable="true"
 
                         android:background="@android:color/transparent"
                         android:padding="3dp"

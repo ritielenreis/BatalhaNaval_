@@ -1,7 +1,7 @@
 package com.example.batalhanaval.controllers
 
 import com.example.batalhanaval.Models.Coordenada
-import com.example.batalhanaval.Models.Jogador
+import kotlin.collections.mutableListOf
 
 object JogoController {
     // ***********  VARIAVEIS  ***********
@@ -10,96 +10,86 @@ object JogoController {
 
     private var jogadorAtual: Int = 1   //UTILIZADO PARA REVESAR OS TURNOS (1 OU 2)
 
-    private var naviosJogador1: Int = 3  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
-    private var naviosJogador2: Int = 3  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
+    private var naviosJogador1: Int = 2  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
+    private var naviosJogador2: Int = 2  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
+
+    private var naviosAfundados1: Int = 0  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
+    private var naviosAfundados2: Int = 0  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
 
     private var tabuleiroDefinido1: Boolean = false //UTILIZADO PARA QUE O BOTÃO SEJA ATIVADO (AO TERMINAR DE DEFINIR OS NAVIOS)
     private var tabuleiroDefinido2: Boolean = false //UTILIZADO PARA QUE O BOTÃO SEJA ATIVADO (AO TERMINAR DE DEFINIR OS NAVIOS)
-
 
     // ***********  FUNCOES  ***********
     fun novoJogo(){
         for (id in 1..25) {
             this.jogador1.add(Coordenada(id = id))
+            this.jogador1[id].temNavio = false
+            this.jogador1[id].foiAtacada = false
         }
         for (id in 1..25) {
             this.jogador2.add(Coordenada(id = id))
+            this.jogador2[id].temNavio = false
+            this.jogador2[id].foiAtacada = false
         }
         this.jogadorAtual = 1
-        this.naviosJogador1 = 3
-        this.naviosJogador2 = 3
+        this.naviosJogador1 = 2
+        this.naviosJogador2 = 2
+        this.naviosAfundados1 = 0
+        this.naviosAfundados2 = 0
         this.tabuleiroDefinido1 = false
         this.tabuleiroDefinido2 = false
     }
 
-    fun posicionarNavio(id: Int, jogador: Int):Boolean {
+    fun getJogador1(): List<Coordenada> {
+        return jogador1
+    }
 
-        if (jogador == 1){
-            var coordenada = jogador1[id]
-            if ( !coordenada.temNavio){
-                coordenada.temNavio = true
-                naviosJogador1 -= 1
+    fun getJogador2(): List<Coordenada> {
+        return jogador2
+    }
 
-                if(naviosJogador1==0){
-                    tabuleiroDefinido1 = true
-                    return true
-                }
-                return true
+    fun posicionarNavio(id: Int, jogadorAtual: Int): Boolean {
+        val coordenada = if (jogadorAtual == 1) jogador1[id] else jogador2[id]
+
+        if (!coordenada.temNavio) {
+            coordenada.temNavio = true
+
+            if (jogadorAtual == 1) {
+                if (--naviosJogador1 == 0) tabuleiroDefinido1 = true
+            } else {
+                if (--naviosJogador2 == 0) tabuleiroDefinido2 = true
             }
+            return true
         }
-        else{
-            var coordenada = jogador2[id]
-            if ( !coordenada.temNavio ){
-                coordenada.temNavio = true
-                naviosJogador2 -= 1
 
-                if(naviosJogador2==0){
-                    tabuleiroDefinido2 = true
-                    return true
-                }
-                return true
-            }
-        }
         return false
     }
 
-    fun naviosRestates(jogador:Int):Int {
-        if (jogador==1){
-            return naviosJogador1
-        } else{
-            return naviosJogador2
-        }
+    fun afundarNavio(){
+        if (jogadorAtual == 1) ++naviosAfundados2 else ++naviosAfundados1
     }
 
-    fun tabuleiroDefinido(jogador :Int):Boolean{
-        if (jogador==1){
-            if (tabuleiroDefinido1){
-                return true
-            }
+    fun verificarFim(): Boolean{
+        if((jogadorAtual == 1) && naviosAfundados2 == 2) return true
+        else if((jogadorAtual == 2) && naviosAfundados1 == 2) return true
+        else return false
+    }
 
-        }else
-        {
-            if (tabuleiroDefinido2){
-                return true
-            }
-        }
-        return false
+    fun naviosRestates(jogadorAtual:Int):Int {
+        return if (jogadorAtual == 1) naviosJogador1 else naviosJogador2
+    }
+
+    fun tabuleiroDefinido(jogadorAtual :Int):Boolean{
+        return if (jogadorAtual == 1) tabuleiroDefinido1 else tabuleiroDefinido2
     }
 
     fun jogadorAtual(): Int {
-        if (jogadorAtual == 1){
-            return 1
-        } else{
-            return 2
-        }
+        jogadorAtual = if (jogadorAtual == 1) return 1 else return 2
     }
 
     fun mudarTurno(){
-        if (jogadorAtual == 1){
-            this.jogadorAtual =2
-        } else{
-            this.jogadorAtual = 1
-        }
+        jogadorAtual = if (jogadorAtual == 1) 2 else 1
     }
+
 
 }

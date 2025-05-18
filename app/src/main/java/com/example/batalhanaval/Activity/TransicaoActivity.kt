@@ -27,14 +27,12 @@ class TransicaoActivity : AppCompatActivity() {
 
     //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
     private fun definirTextoInicial() {
-        val textoTabuleiro = findViewById<TextView>(R.id.textTransicao)
-        val jogadorAtual = JogoController.jogadorAtual()
+        val textoTabuleiro = findViewById<TextView>(R.id.textTransicao)  //faz o texto da tela ser dinâmico
 
-        if (jogadorAtual == 1) {
-            textoTabuleiro.setText("Jogador 1")
-        } else {
-            textoTabuleiro.setText("Jogador 2")
-        }
+        val jogadorAtual = JogoController.jogadorAtual()
+        textoTabuleiro.setText("Jogador $jogadorAtual")
+
+
     }
 
 

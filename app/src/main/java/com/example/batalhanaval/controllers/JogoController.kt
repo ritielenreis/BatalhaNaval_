@@ -13,23 +13,23 @@ object JogoController {
     private var naviosJogador1: Int = 3  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
     private var naviosJogador2: Int = 3  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
 
-    private var naviosAfundados1: Int = 0  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
-    private var naviosAfundados2: Int = 0  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
+    private var naviosAfundados1: Int = 0
+    private var naviosAfundados2: Int = 0
 
     private var tabuleiroDefinido1: Boolean = false //UTILIZADO PARA QUE O BOTÃO SEJA ATIVADO (AO TERMINAR DE DEFINIR OS NAVIOS)
     private var tabuleiroDefinido2: Boolean = false //UTILIZADO PARA QUE O BOTÃO SEJA ATIVADO (AO TERMINAR DE DEFINIR OS NAVIOS)
 
     // ***********  FUNCOES  ***********
     fun novoJogo(){
-        for (id in 1..25) {
+        for (id in 0..25) {
             this.jogador1.add(Coordenada(id = id))
-            //this.jogador1[id].temNavio = false
-            //this.jogador1[id].foiAtacada = false
+            this.jogador1[id].temNavio = false
+            this.jogador1[id].foiAtacada = false
         }
-        for (id in 1..25) {
+        for (id in 0..25) {
             this.jogador2.add(Coordenada(id = id))
-            //this.jogador2[id].temNavio = false
-            //this.jogador2[id].foiAtacada = false
+            this.jogador2[id].temNavio = false
+            this.jogador2[id].foiAtacada = false
         }
         this.jogadorAtual = 1
         this.naviosJogador1 = 3

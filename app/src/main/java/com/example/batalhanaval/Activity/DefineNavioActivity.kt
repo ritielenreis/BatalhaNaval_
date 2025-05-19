@@ -61,7 +61,6 @@ class DefineNavioActivity : AppCompatActivity() {
         }
     }
 
-
     //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
     private fun definirTextoInicial() {
         val textoTabuleiro = findViewById<TextView>(R.id.textJogadorDN)
@@ -76,12 +75,4 @@ class DefineNavioActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun teste(view: View){
-        val cooderdana = view as ImageButton                    //RECEBE O OBJETO BOTAO QUE DEU O CLIQUE (1 a 25)
-        val id = cooderdana.tag.toString().toInt()              //RECEBE O NUMERO DA COORDENADA QUE DEU O CLIQUEI (1 A 25)
-
-        val jogadorAtual = JogoController.jogadorAtual()
-        val botaoPassarTurno = findViewById<Button>(R.id.btn0)
-        val textoTabuleiro = findViewById<TextView>(R.id.textTabuleiro)
-    }
 }

@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:fontFamily="@font/adlam_display"
-                android:shadowColor="@color/black"
+                android:shadowColor="#0B3C68"
                 android:shadowRadius="40"
                 android:text="Jogador 1"
                 android:textAlignment="center"
@@ -55,8 +55,8 @@
                 android:layout_height="50dp"
                 android:fontFamily="@font/adlam_display"
                 android:paddingTop="10dp"
-                android:shadowColor="@color/black"
-                android:shadowRadius="40"
+                android:shadowColor="#0D487E"
+                android:shadowRadius="50"
                 android:text="Realizar Tiro"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -76,17 +76,18 @@
 
                 <TextView
                     android:id="@+id/textTabuleiro"
-                    android:layout_width="223dp"
+                    android:layout_width="240dp"
+
                     android:layout_height="match_parent"
                     android:fontFamily="@font/adlam_display"
                     android:paddingTop="10dp"
-                    android:shadowColor="@color/black"
-                    android:shadowRadius="40"
-                    android:text="Tabuleiro Próprio"
-                    android:textAlignment="textStart"
+                    android:shadowColor="#0D487E"
+                    android:shadowRadius="50"
+                    android:text="Tabuleiro Inimigo"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:textSize="24sp"
+                    android:textStyle="normal" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -95,8 +96,8 @@
 
                 <Switch
                     android:id="@+id/switch1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="34dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1" />
 
                 <FrameLayout
@@ -150,14 +151,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="1" />
 
@@ -166,14 +167,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="2" />
 
@@ -182,14 +183,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="3" />
 
@@ -198,14 +199,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="4" />
 
@@ -214,14 +215,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="5" />
 
@@ -231,14 +232,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="6" />
 
@@ -247,14 +248,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="7" />
 
@@ -263,14 +264,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="8" />
 
@@ -279,14 +280,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="9" />
 
@@ -295,14 +296,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="10" />
 
@@ -312,14 +313,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="11" />
 
@@ -328,14 +329,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="12" />
 
@@ -344,14 +345,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="13" />
 
@@ -360,14 +361,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="14" />
 
@@ -376,14 +377,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="15" />
 
@@ -393,14 +394,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="16" />
 
@@ -409,14 +410,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="17" />
 
@@ -425,14 +426,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="18" />
 
@@ -441,14 +442,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="19" />
 
@@ -457,14 +458,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="20" />
 
@@ -474,14 +475,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="21" />
 
@@ -490,14 +491,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="22" />
 
@@ -506,14 +507,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="23" />
 
@@ -522,14 +523,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="24" />
 
@@ -538,14 +539,14 @@
                         android:layout_width="58dp"
                         android:layout_height="58dp"
 
-                        android:scaleType="fitCenter"
                         android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="true"
 
-                        android:background="@android:color/transparent"
                         android:onClick="atirar"
                         android:padding="3dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/borda"
                         android:tag="25" />
                 </GridLayout>

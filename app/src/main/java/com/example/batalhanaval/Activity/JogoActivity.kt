@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.GridLayout
 import android.widget.ImageButton
 import android.widget.Switch
-import androidx.appcompat.widget.SwitchCompat
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +29,8 @@ class JogoActivity : AppCompatActivity() {
 
         mostrarTabuleiros()
         definirTextoInicial()
+        definirImagens()
+
     }
     var tiroRealizado = false
 
@@ -47,59 +48,71 @@ class JogoActivity : AppCompatActivity() {
         val textTabuleiro = findViewById<TextView>(R.id.textTabuleiro)
         val switchTabuleiro = findViewById<Switch>(R.id.switch1)
 
-        var jogadorAtual = JogoController.jogadorAtual()
-        val meuTabuleiro =
-            if (jogadorAtual == 1) JogoController.getJogador1() else JogoController.getJogador2()
-        val tabuleiroDoInimigo =
-            if (jogadorAtual == 1) JogoController.getJogador2() else JogoController.getJogador1()
-
-
-        //está definindo a função do botao de troca de tabuleiro
+        //DEFINE O ON/OFF DOS TABULEIROS
         switchTabuleiro.setOnCheckedChangeListener { _, isChecked ->
             val mostrarProprio = !isChecked
 
             tabuleiroProprio.visibility = if (mostrarProprio) View.VISIBLE else View.GONE
             tabuleiroInimigo.visibility = if (mostrarProprio) View.GONE else View.VISIBLE
-            textTabuleiro.text = if (mostrarProprio) "Tabuleiro Próprio" else "Tabuleiro Inimigo"
+            textTabuleiro.text = if (mostrarProprio) "Tabuleiro Inimigo" else "Tabuleiro Próprio"
         };
 
         tabuleiroProprio.setVisibility(View.VISIBLE);
         tabuleiroInimigo.setVisibility(View.GONE);
 
-        //**************************** DEFINE AS IMAGENS INICIAS E O ESTADO DO BOTAO (SE ATIROU PASSA A INATIVO) *********************************
-
-
-        for (view in tabuleiroProprio.children) {
-            """
-            if (view is ImageButton) {
-                val id = view.tag.toString().toInt()
-                val coordenada = meuTabuleiro[id]  // jogador1 aqui
-
-                when {
-                    coordenada.foiAtacada && coordenada.temNavio -> view.setImageResource(R.drawable.naviodestruido)
-                    coordenada.foiAtacada && !coordenada.temNavio -> view.setImageResource(R.drawable.splash)
-                    !coordenada.foiAtacada && coordenada.temNavio -> view.setImageResource(R.drawable.naviointeiro)
-                    else -> view.setImageDrawable(null)
-                }
-            }"""
-        }
-
-        for (view in tabuleiroInimigo.children) {
-"""
-            if (view is ImageButton) {
-                val id = view.tag.toString().toInt()
-                val coordenada = tabuleiroDoInimigo[id]
-
-                when {
-                    coordenada.foiAtacada && coordenada.temNavio -> view.setImageResource(R.drawable.naviodestruido)
-                    coordenada.foiAtacada && !coordenada.temNavio -> view.setImageResource(R.drawable.splash)
-                    else -> view.setImageDrawable(null)
-                }
-            }"""
-        }
     }
 
+    private fun definirImagens(){
+        val tabuleiroProprio = findViewById<GridLayout>(R.id.tabuleiroProprio)
+        val tabuleiroInimigo = findViewById<GridLayout>(R.id.tabuleiroInimigo)
 
+        var jogadorAtual = JogoController.jogadorAtual()
+        val meuTabuleiro = if (jogadorAtual == 1) JogoController.getJogador1() else JogoController.getJogador2()
+        val tabuleiroDoInimigo = if (jogadorAtual == 1) JogoController.getJogador2() else JogoController.getJogador1()
+
+
+        for(item in tabuleiroDoInimigo){
+            val coordenada = tabuleiroProprio.children.firstOrNull {
+                it is ImageButton && it.tag == item.id.toString()// RETORNA O BOTÃO CORRESPONDENTE Á COORDENADA
+            } as? ImageButton
+
+            if(item.foiAtacada && item.temNavio){
+                //SE FOI ATACADO E TEM NAVIO
+                coordenada?.setImageDrawable(null)
+                coordenada?.setBackgroundResource(R.drawable.naviodestruido)
+
+            } else if(item.foiAtacada && !item.temNavio){
+                //SE FOI ATACADO E NAO TEM NAVIO
+                coordenada?.setImageDrawable(null)
+                coordenada?.setBackgroundResource(R.drawable.splash)
+
+            }
+
+        }
+
+        for(item in meuTabuleiro){
+            val coord = tabuleiroInimigo.children.firstOrNull {
+                it is ImageButton && it.tag == item.id.toString()
+            } as? ImageButton
+
+            if(item.foiAtacada && item.temNavio){
+                //SE FOI ATACADO E TEM NAVIO
+
+                coord?.setImageDrawable(null)
+                coord?.setBackgroundResource(R.drawable.naviodestruido)
+
+            } else if(item.foiAtacada && !item.temNavio){
+                //SE FOI ATACADO E NAO TEM NAVIO
+                coord?.setImageDrawable(null)
+                coord?.setBackgroundResource(R.drawable.splash)
+
+            }else if(!item.foiAtacada && item.temNavio){
+                //SE NAO FOI ATACADO E TEM NAVIO
+                coord?.setImageDrawable(null)
+                coord?.setBackgroundResource(R.drawable.naviointeiro)
+            }
+        }
+    }
 
     fun atirar(view: View) {
 
@@ -114,9 +127,9 @@ class JogoActivity : AppCompatActivity() {
 
         if (tiroRealizado || coordenada.foiAtacada){
             btnCoordenada.isEnabled = false
-            return
-
+            return //EVITA QUE O CODIGO O RESTANTE RODE DESNECESSARIAMENTE
         }
+
         coordenada.foiAtacada = true
         tiroRealizado = true
         btnCoordenada.isEnabled = false
@@ -138,12 +151,8 @@ class JogoActivity : AppCompatActivity() {
 
         val botaoPassarTurno = findViewById<Button>(R.id.btnProx)
         botaoPassarTurno.isEnabled = true
-
-
-
     }
 
-    //**************  BOTAO PARA PASSAR TURNO  **************
     fun proximoTurno(view: View) {
         JogoController.mudarTurno()
         tiroRealizado = false

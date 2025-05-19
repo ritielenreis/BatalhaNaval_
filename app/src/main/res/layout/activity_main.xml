@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 android:fontFamily="@font/adlam_display"
-                android:shadowColor="@color/black"
+                android:shadowColor="#0B3C68"
                 android:shadowRadius="40"
                 android:text="Batalha Naval"
                 android:textAlignment="center"
@@ -53,7 +53,7 @@
                 android:id="@+id/btnProx"
                 android:layout_width="match_parent"
 
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:backgroundTint="#25E42F"
                 android:insetLeft="50dp"
                 android:insetRight="50dp"

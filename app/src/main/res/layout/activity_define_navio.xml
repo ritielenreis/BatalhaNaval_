@@ -97,20 +97,14 @@
                 android:layout_height="50dp" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="290dp"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/divider2"
-                    android:layout_width="60dp"
-                    android:layout_height="match_parent"
-                    android:background="?android:attr/listDivider"
-                    android:visibility="invisible" />
 
                 <GridLayout
                     android:id="@+id/tabuleiroDefineNavio"
-                    android:layout_width="288dp"
+                    android:layout_width="327dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:columnCount="5"
@@ -397,13 +391,6 @@
                         android:src="@drawable/borda"
                         android:tag="25" />
                 </GridLayout>
-
-                <View
-                    android:id="@+id/divider"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:background="?android:attr/listDivider"
-                    android:visibility="invisible" />
 
             </LinearLayout>
         </LinearLayout>

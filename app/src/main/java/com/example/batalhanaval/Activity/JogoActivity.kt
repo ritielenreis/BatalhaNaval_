@@ -81,7 +81,7 @@ class JogoActivity : AppCompatActivity() {
                 coordenada?.setImageDrawable(null)
                 coordenada?.setBackgroundResource(R.drawable.naviodestruido)
 
-            } else if(item.foiAtacada && !item.temNavio){
+            } else if(item.foiAtacada){
                 //SE FOI ATACADO E NAO TEM NAVIO
                 coordenada?.setImageDrawable(null)
                 coordenada?.setBackgroundResource(R.drawable.splash)
@@ -101,12 +101,12 @@ class JogoActivity : AppCompatActivity() {
                 coord?.setImageDrawable(null)
                 coord?.setBackgroundResource(R.drawable.naviodestruido)
 
-            } else if(item.foiAtacada && !item.temNavio){
+            } else if(item.foiAtacada){
                 //SE FOI ATACADO E NAO TEM NAVIO
                 coord?.setImageDrawable(null)
                 coord?.setBackgroundResource(R.drawable.splash)
 
-            }else if(!item.foiAtacada && item.temNavio){
+            } else if(item.temNavio){
                 //SE NAO FOI ATACADO E TEM NAVIO
                 coord?.setImageDrawable(null)
                 coord?.setBackgroundResource(R.drawable.naviointeiro)
@@ -141,7 +141,7 @@ class JogoActivity : AppCompatActivity() {
             btnCoordenada.setBackgroundResource(R.drawable.splash)
         }
 
-        if (JogoController.verificarFim()){
+        if (JogoController.verificarFimJogo()){
             val vencedor = JogoController.jogadorAtual()
             val intent = Intent(this, GanhadorActivity::class.java)
             intent.putExtra("jogadorVencedor", vencedor)

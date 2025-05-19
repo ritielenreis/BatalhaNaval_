@@ -31,17 +31,17 @@ class DefineNavioActivity : AppCompatActivity() {
 
     //**************  BOTAO PARA DEFINIR NAVIO  **************
     fun definirNavio(view: View) {
-        val cooderdana = view as ImageButton                    //RECEBE O OBJETO BOTAO QUE DEU O CLIQUE (1 a 25)
-        val id = cooderdana.tag.toString().toInt()              //RECEBE O NUMERO DA COORDENADA QUE DEU O CLIQUEI (1 A 25)
+        val coordenada = view as ImageButton                    //RECEBE O OBJETO BOTAO QUE DEU O CLIQUE (1 a 25)
+        val id = coordenada.tag.toString().toInt()              //RECEBE O NUMERO DA COORDENADA QUE DEU O CLIQUEI (1 A 25)
         val jogadorAtual = JogoController.jogadorAtual()
         val botaoPassarTurno = findViewById<Button>(R.id.btn0)
 
         //************** DEFINIR LOGICA DE TODOS OS NAVIOS COLOCADOS PARA ATIVAR O BOTAO DE PASSAR TURNO **************
         if(JogoController.posicionarNavio(id,jogadorAtual)){
 
-            cooderdana.isEnabled = false
-            cooderdana.setImageDrawable(null)
-            cooderdana.setBackgroundResource(R.drawable.naviointeiro)
+            coordenada.isEnabled = false
+            coordenada.setImageDrawable(null)
+            coordenada.setBackgroundResource(R.drawable.naviointeiro)
 
             var texto = "Restantes: " + JogoController.naviosRestates(jogadorAtual)
             findViewById<TextView>(R.id.textNaviosRestantes).setText(texto)
@@ -66,6 +66,9 @@ class DefineNavioActivity : AppCompatActivity() {
         val textoTabuleiro = findViewById<TextView>(R.id.textJogadorDN)
         val jogadorAtual = JogoController.jogadorAtual()
         textoTabuleiro.setText("Jogador $jogadorAtual")
+
+        var txtNaviosRestantes = "Restantes: " + JogoController.naviosRestates(jogadorAtual)
+        findViewById<TextView>(R.id.textNaviosRestantes).setText(txtNaviosRestantes)
     }
 
     //************** USADO NO BOTAO PARA PASSAR TURNO  **************

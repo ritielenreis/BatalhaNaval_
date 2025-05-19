@@ -32,7 +32,7 @@
                 android:text="Turno do"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="75dp"
+                android:textSize="60sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -45,7 +45,7 @@
                 android:text="Jogador 1"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="80dp"
+                android:textSize="60sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -68,11 +68,11 @@
                 android:insetLeft="50dp"
                 android:insetRight="50dp"
                 android:onClick="passarTurno"
-                android:shadowColor="@color/black"
+                android:shadowColor="#2A541B"
                 android:shadowRadius="80"
                 android:text="Jogar"
                 android:textAlignment="center"
-                android:textSize="45dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp" />
         </LinearLayout>

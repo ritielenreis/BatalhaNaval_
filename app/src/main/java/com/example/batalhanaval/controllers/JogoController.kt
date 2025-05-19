@@ -20,7 +20,7 @@ object JogoController {
     private var tabuleiroDefinido2: Boolean = false //UTILIZADO PARA QUE O BOTÃO SEJA ATIVADO (AO TERMINAR DE DEFINIR OS NAVIOS)
 
     // ***********  FUNCOES  ***********
-    fun novoJogo(){
+    fun novoJogo(){  //INICIA O JOGO COM OS VALORES PADRÃO
         for (id in 0..25) {
             this.jogador1.add(Coordenada(id = id))
             this.jogador1[id].temNavio = false
@@ -61,7 +61,6 @@ object JogoController {
             }
             return true
         }
-
         return false
     }
 
@@ -69,7 +68,7 @@ object JogoController {
         if (jogadorAtual == 1) ++naviosAfundados2 else ++naviosAfundados1
     }
 
-    fun verificarFim(): Boolean{
+    fun verificarFimJogo(): Boolean{
         if((jogadorAtual == 1) && naviosAfundados2 == 3) return true
         else if((jogadorAtual == 2) && naviosAfundados1 == 3) return true
         else return false
@@ -90,6 +89,5 @@ object JogoController {
     fun mudarTurno(){
         jogadorAtual = if (jogadorAtual == 1) 2 else 1
     }
-
 
 }

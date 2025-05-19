@@ -24,17 +24,12 @@ class TransicaoActivity : AppCompatActivity() {
         definirTextoInicial()
     }
 
-
     //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
     private fun definirTextoInicial() {
-        val textoTabuleiro = findViewById<TextView>(R.id.textTransicao)  //faz o texto da tela ser dinâmico
-
+        val textoTabuleiro = findViewById<TextView>(R.id.textTransicao)
         val jogadorAtual = JogoController.jogadorAtual()
         textoTabuleiro.setText("Jogador $jogadorAtual")
-
-
     }
-
 
     //************** USADO NO BOTAO PARA PASSAR TURNO  **************
     fun passarTurno(view: View) {

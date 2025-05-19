@@ -67,15 +67,14 @@
 
                 android:layout_height="80dp"
                 android:backgroundTint="#25E42F"
-                android:fontFamily="@font/adlam_display"
                 android:insetLeft="50dp"
                 android:insetRight="50dp"
                 android:onClick="jogarNovamente"
-                android:shadowColor="@color/black"
+                android:shadowColor="#2A541B"
                 android:shadowRadius="80"
                 android:text="Novo Jogo"
                 android:textAlignment="center"
-                android:textSize="40dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp" />
         </LinearLayout>

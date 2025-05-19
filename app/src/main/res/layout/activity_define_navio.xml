@@ -74,7 +74,7 @@
                 android:paddingTop="10dp"
                 android:shadowColor="#0D487E"
                 android:shadowRadius="40"
-                android:text="Restantes: 3"
+                android:text="Restantes: "
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="25dp"
@@ -432,11 +432,11 @@
                 android:insetLeft="50dp"
                 android:insetRight="50dp"
                 android:onClick="passarTurno"
-                android:shadowColor="@color/black"
+                android:shadowColor="#2A541B"
                 android:shadowRadius="80"
-                android:text="Proximo Jogador"
+                android:text="Próximo Jogador"
                 android:textAlignment="center"
-                android:textSize="33dp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp" />
         </LinearLayout>

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.batalhanaval.R
+import com.example.batalhanaval.controllers.JogoController
 
 class GanhadorActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
@@ -35,7 +36,8 @@ class GanhadorActivity : AppCompatActivity() {
     }
 
     fun jogarNovamente(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
+        JogoController.novoJogo()
+        val intent = Intent(this, DefineNavioActivity::class.java)
         startActivity(intent)
     }
 }

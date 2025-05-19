@@ -7,14 +7,13 @@ import android.widget.Button
 import android.widget.GridLayout
 import android.widget.ImageButton
 import android.widget.Switch
+import androidx.appcompat.widget.SwitchCompat
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.children
-import com.example.batalhanaval.Models.Coordenada
-import com.example.batalhanaval.Models.Jogo
 import com.example.batalhanaval.R
 import com.example.batalhanaval.controllers.JogoController
 
@@ -33,7 +32,7 @@ class JogoActivity : AppCompatActivity() {
         definirTextoInicial()
     }
     var tiroRealizado = false
-    var jogador = JogoController.jogadorAtual()
+
 
     //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
     private fun definirTextoInicial() {
@@ -42,61 +41,65 @@ class JogoActivity : AppCompatActivity() {
         textoTabuleiro.setText("Jogador $jogadorAtual")
     }
 
-    private fun mostrarTabuleiros(){
+    private fun mostrarTabuleiros() {
+        val tabuleiroProprio = findViewById<GridLayout>(R.id.tabuleiroProprio)
+        val tabuleiroInimigo = findViewById<GridLayout>(R.id.tabuleiroInimigo)
+        val textTabuleiro = findViewById<TextView>(R.id.textTabuleiro)
         val switchTabuleiro = findViewById<Switch>(R.id.switch1)
 
-        val tabuleiroJogador = findViewById<GridLayout>(R.id.tabuleiroProprio)
-        val tabuleiroOponente = findViewById<GridLayout>(R.id.tabuleiroInimigo)
-        val textTabuleiro = findViewById<TextView>(R.id.textTabuleiro)
+        var jogadorAtual = JogoController.jogadorAtual()
+        val meuTabuleiro =
+            if (jogadorAtual == 1) JogoController.getJogador1() else JogoController.getJogador2()
+        val tabuleiroDoInimigo =
+            if (jogadorAtual == 1) JogoController.getJogador2() else JogoController.getJogador1()
 
-        tabuleiroJogador.visibility = View.VISIBLE
-        tabuleiroOponente.visibility = View.GONE
 
         //está definindo a função do botao de troca de tabuleiro
         switchTabuleiro.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                tabuleiroJogador.visibility = View.GONE
-                tabuleiroOponente.visibility = View.VISIBLE
-                textTabuleiro.setText("Tabuleiro Próprio")
+            val mostrarProprio = !isChecked
 
+            tabuleiroProprio.visibility = if (mostrarProprio) View.VISIBLE else View.GONE
+            tabuleiroInimigo.visibility = if (mostrarProprio) View.GONE else View.VISIBLE
+            textTabuleiro.text = if (mostrarProprio) "Tabuleiro Próprio" else "Tabuleiro Inimigo"
+        };
 
-            } else {
-                tabuleiroJogador.visibility = View.VISIBLE
-                tabuleiroOponente.visibility = View.GONE
-                textTabuleiro.setText("Tabuleiro Inimigo")
-            }
-        }
-
+        tabuleiroProprio.setVisibility(View.VISIBLE);
+        tabuleiroInimigo.setVisibility(View.GONE);
 
         //**************************** DEFINE AS IMAGENS INICIAS E O ESTADO DO BOTAO (SE ATIROU PASSA A INATIVO) *********************************
 
-        if(JogoController.jogadorAtual()==1){
-            for (view in tabuleiroJogador.children) {
-                if (view is ImageButton) {
-                    val id = view.tag.toString().toInt()
-                    """
-                    val jogador = if (JogoController.jogadorAtual()== 1) JogoController.getJogador1() else JogoController.getJogador2() //
-                    val coordenada = jogador[id]
-                    when {
 
-                        coordenada.foiAtacada && coordenada.temNavio -> view.setImageResource(R.drawable.naviodestruido)
-                        coordenada.foiAtacada && !coordenada.temNavio -> view.setImageResource(R.drawable.splash)
-                    }"""
+        for (view in tabuleiroProprio.children) {
+            """
+            if (view is ImageButton) {
+                val id = view.tag.toString().toInt()
+                val coordenada = meuTabuleiro[id]  // jogador1 aqui
+
+                when {
+                    coordenada.foiAtacada && coordenada.temNavio -> view.setImageResource(R.drawable.naviodestruido)
+                    coordenada.foiAtacada && !coordenada.temNavio -> view.setImageResource(R.drawable.splash)
+                    !coordenada.foiAtacada && coordenada.temNavio -> view.setImageResource(R.drawable.naviointeiro)
+                    else -> view.setImageDrawable(null)
                 }
-            }
-        } else{
-            for (view in tabuleiroOponente.children) {
-                if (view is ImageButton) {
-                    //  view.setImageDrawable(null)
-                    //   view.setBackgroundResource(R.drawable.naviointeiro)
-                    val tag = view.tag?.toString()?.toInt()
-                    if(tag==1){
-                    }
-                }
-            }
+            }"""
         }
 
+        for (view in tabuleiroInimigo.children) {
+"""
+            if (view is ImageButton) {
+                val id = view.tag.toString().toInt()
+                val coordenada = tabuleiroDoInimigo[id]
+
+                when {
+                    coordenada.foiAtacada && coordenada.temNavio -> view.setImageResource(R.drawable.naviodestruido)
+                    coordenada.foiAtacada && !coordenada.temNavio -> view.setImageResource(R.drawable.splash)
+                    else -> view.setImageDrawable(null)
+                }
+            }"""
+        }
     }
+
+
 
     fun atirar(view: View) {
 
@@ -106,47 +109,39 @@ class JogoActivity : AppCompatActivity() {
         //RECEBE O NUMERO DA COORDENADA QUE DEU O CLIQUE (1 A 25)
         val id = btnCoordenada.tag.toString().toInt()
 
-        val jogador = if (JogoController.jogadorAtual()== 1) JogoController.getJogador1() else JogoController.getJogador2() //
-        val coordenada = jogador[id]                                                                                        //
-
-
+        val jogadorAdversario = if (JogoController.jogadorAtual()== 1) JogoController.getJogador2() else JogoController.getJogador1() //
+        val coordenada = jogadorAdversario[id]                                                                                        //
 
         if (tiroRealizado || coordenada.foiAtacada){
             btnCoordenada.isEnabled = false
+            return
 
-        }else if (!coordenada.foiAtacada && !tiroRealizado) {
-            coordenada.foiAtacada = true
-            tiroRealizado = true
-            btnCoordenada.isEnabled = false
-            btnCoordenada.setBackgroundResource(R.drawable.splash)
+        }
+        coordenada.foiAtacada = true
+        tiroRealizado = true
+        btnCoordenada.isEnabled = false
+
+        if (coordenada.temNavio) {
             JogoController.afundarNavio()
-
-            if (JogoController.verificarFim()==true){
-                val vencedor = JogoController.jogadorAtual()
-                val intent = Intent(this, GanhadorActivity::class.java)
-                intent.putExtra("jogadorVencedor", vencedor)
-                startActivity(intent)
-                finish()
-            }
-
-            val tabuleiroJogador = findViewById<GridLayout>(R.id.tabuleiroProprio)
-            val tabuleiroOponente = findViewById<GridLayout>(R.id.tabuleiroInimigo)
-
-
-            val botaoPassarTurno = findViewById<Button>(R.id.btnProx)
-            botaoPassarTurno.isEnabled = true
-
-            /*
-        if (JogoController.posicionarNavio(id,jogadorAtual)){
-            //DEFINE AS IMAGENS DO BOTAO
-            //TORNA O BOTÃO INATIVO}
-        */
-            //logica para ativar o botao de mudar turno
-            //if()
+            btnCoordenada.setBackgroundResource(R.drawable.naviodestruido)
+        } else {
+            btnCoordenada.setBackgroundResource(R.drawable.splash)
         }
 
-    }
+        if (JogoController.verificarFim()){
+            val vencedor = JogoController.jogadorAtual()
+            val intent = Intent(this, GanhadorActivity::class.java)
+            intent.putExtra("jogadorVencedor", vencedor)
+            startActivity(intent)
+            finish()
+        }
 
+        val botaoPassarTurno = findViewById<Button>(R.id.btnProx)
+        botaoPassarTurno.isEnabled = true
+
+
+
+    }
 
     //**************  BOTAO PARA PASSAR TURNO  **************
     fun proximoTurno(view: View) {
@@ -155,34 +150,6 @@ class JogoActivity : AppCompatActivity() {
         val intent = Intent(this, TransicaoActivity::class.java)
         startActivity(intent)
     }
+}
 
-
-    }
-
-
-
-/*
-* // ADICIONAR as imagens nos botões BOTÕES DAS COORDENADAS
-        val grid = findViewById<GridLayout>(R.id.grid)
-
-        for (i in 0 until grid.childCount) {
-
-            val botao = grid.getChildAt(i) as ImageButton
-
-
-            botao.setOnClickListener { view ->
-                val tag = view.tag.toString()  // ex: "2,3"
-
-                val coordenada = tag.toInt()
-                // Exemplo: mudar imagem
-
-                botao.setImageResource(R.drawable.navioDestruido)
-
-
-                // Agora você sabe qual botão foi clicado
-                Toast.makeText(this, "Clicou em $linha, $coluna", Toast.LENGTH_SHORT).show()
-
-            }
-        }
-* */
 

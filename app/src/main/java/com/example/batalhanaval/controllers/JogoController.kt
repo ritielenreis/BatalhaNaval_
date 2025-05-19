@@ -10,8 +10,8 @@ object JogoController {
 
     private var jogadorAtual: Int = 1   //UTILIZADO PARA REVESAR OS TURNOS (1 OU 2)
 
-    private var naviosJogador1: Int = 2  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
-    private var naviosJogador2: Int = 2  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
+    private var naviosJogador1: Int = 3  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
+    private var naviosJogador2: Int = 3  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
 
     private var naviosAfundados1: Int = 0  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
     private var naviosAfundados2: Int = 0  //TOTAL DE NAVIOS QUE O JOGADOR TERÁ
@@ -23,17 +23,17 @@ object JogoController {
     fun novoJogo(){
         for (id in 1..25) {
             this.jogador1.add(Coordenada(id = id))
-            this.jogador1[id].temNavio = false
-            this.jogador1[id].foiAtacada = false
+            //this.jogador1[id].temNavio = false
+            //this.jogador1[id].foiAtacada = false
         }
         for (id in 1..25) {
             this.jogador2.add(Coordenada(id = id))
-            this.jogador2[id].temNavio = false
-            this.jogador2[id].foiAtacada = false
+            //this.jogador2[id].temNavio = false
+            //this.jogador2[id].foiAtacada = false
         }
         this.jogadorAtual = 1
-        this.naviosJogador1 = 2
-        this.naviosJogador2 = 2
+        this.naviosJogador1 = 3
+        this.naviosJogador2 = 3
         this.naviosAfundados1 = 0
         this.naviosAfundados2 = 0
         this.tabuleiroDefinido1 = false
@@ -70,8 +70,8 @@ object JogoController {
     }
 
     fun verificarFim(): Boolean{
-        if((jogadorAtual == 1) && naviosAfundados2 == 2) return true
-        else if((jogadorAtual == 2) && naviosAfundados1 == 2) return true
+        if((jogadorAtual == 1) && naviosAfundados2 == 3) return true
+        else if((jogadorAtual == 2) && naviosAfundados1 == 3) return true
         else return false
     }
 

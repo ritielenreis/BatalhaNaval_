@@ -41,7 +41,7 @@ class TransicaoActivity : AppCompatActivity() {
         val jogadorAtual = JogoController.jogadorAtual()
 
         //SE O JOGADOR 2 NAO DEFINIU NAVIO IRÁ PARA DEFINE ACTIVITY
-        if (jogadorAtual == 2 && !JogoController.tabuleiroDefinido(2)){
+        if (!JogoController.tabuleiroDefinido(jogadorAtual)){
             val intent = Intent(this, DefineNavioActivity::class.java)
             startActivity(intent)
         } else{

@@ -48,7 +48,7 @@ class JogoActivity : AppCompatActivity() {
         val textTabuleiro = findViewById<TextView>(R.id.textTabuleiro)
         val switchTabuleiro = findViewById<Switch>(R.id.switch1)
 
-        //DEFINE O ON/OFF DOS TABULEIROS
+        //DEFINE O ON/OFF DA VISIBILIDADE NDOS TABULEIROS
         switchTabuleiro.setOnCheckedChangeListener { _, isChecked ->
             val mostrarProprio = !isChecked
 
@@ -85,31 +85,29 @@ class JogoActivity : AppCompatActivity() {
                 //SE FOI ATACADO E NAO TEM NAVIO
                 coordenada?.setImageDrawable(null)
                 coordenada?.setBackgroundResource(R.drawable.splash)
-
             }
-
         }
 
         for(item in meuTabuleiro){
-            val coord = tabuleiroInimigo.children.firstOrNull {
+            val coordenada = tabuleiroInimigo.children.firstOrNull {
                 it is ImageButton && it.tag == item.id.toString()
             } as? ImageButton
 
             if(item.foiAtacada && item.temNavio){
                 //SE FOI ATACADO E TEM NAVIO
 
-                coord?.setImageDrawable(null)
-                coord?.setBackgroundResource(R.drawable.naviodestruido)
+                coordenada?.setImageDrawable(null)
+                coordenada?.setBackgroundResource(R.drawable.naviodestruido)
 
             } else if(item.foiAtacada){
                 //SE FOI ATACADO E NAO TEM NAVIO
-                coord?.setImageDrawable(null)
-                coord?.setBackgroundResource(R.drawable.splash)
+                coordenada?.setImageDrawable(null)
+                coordenada?.setBackgroundResource(R.drawable.splash)
 
             } else if(item.temNavio){
                 //SE NAO FOI ATACADO E TEM NAVIO
-                coord?.setImageDrawable(null)
-                coord?.setBackgroundResource(R.drawable.naviointeiro)
+                coordenada?.setImageDrawable(null)
+                coordenada?.setBackgroundResource(R.drawable.naviointeiro)
             }
         }
     }
@@ -136,8 +134,10 @@ class JogoActivity : AppCompatActivity() {
 
         if (coordenada.temNavio) {
             JogoController.afundarNavio()
+            btnCoordenada.setImageDrawable(null)
             btnCoordenada.setBackgroundResource(R.drawable.naviodestruido)
         } else {
+            btnCoordenada.setImageDrawable(null)
             btnCoordenada.setBackgroundResource(R.drawable.splash)
         }
 

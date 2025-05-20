@@ -34,7 +34,6 @@ class JogoActivity : AppCompatActivity() {
     }
     var tiroRealizado = false
 
-
     //**************  DEFINE O TEXTO DO JOGADOR AO INICIAR A ACTIVITY  **************
     private fun definirTextoInicial() {
         val textoTabuleiro = findViewById<TextView>(R.id.textJogadorTiro)
@@ -125,7 +124,7 @@ class JogoActivity : AppCompatActivity() {
 
         if (tiroRealizado || coordenada.foiAtacada){
             btnCoordenada.isEnabled = false
-            return //EVITA QUE O CODIGO O RESTANTE RODE DESNECESSARIAMENTE
+            return //EVITA QUE O CODIGO RESTANTE RODE DESNECESSARIAMENTE
         }
 
         coordenada.foiAtacada = true
